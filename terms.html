@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow" />
+<title>Terms of Service — PACE Running Club</title>
+<style>
+  :root{
+    --ink:#eef1f6; --muted:#9aa6bd; --faint:#6b7690;
+    --glass:rgba(12,18,34,0.46); --glass-border:rgba(255,255,255,0.12);
+    --glass-hi:rgba(255,255,255,0.12);
+    --accent:#4d9bff; --accent-strong:#2f86ff;
+    --callout:rgba(0,106,255,0.16); --callout-border:rgba(77,155,255,0.40);
+    --shadow:0 40px 100px -30px rgba(0,0,0,0.85);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{background:#050810; color:var(--ink);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden;}
+  #bg{position:fixed; inset:0; width:100%; height:100%; z-index:-2; display:block;}
+  .scrim{position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:radial-gradient(120vmax 80vmax at 50% -8%, transparent, rgba(5,8,16,0.35) 62%, rgba(5,8,16,0.72) 100%);}
+  header.bar{position:sticky; top:0; z-index:5;
+    backdrop-filter:blur(18px) saturate(140%); -webkit-backdrop-filter:blur(18px) saturate(140%);
+    background:linear-gradient(180deg, rgba(5,8,16,0.66), transparent);
+    border-bottom:1px solid var(--glass-border);}
+  .bar-in{max-width:840px; margin:0 auto; padding:14px 22px; display:flex; align-items:center; justify-content:space-between; gap:14px;}
+  .brand{display:flex; align-items:center; gap:9px; font-weight:800; letter-spacing:.14em; font-size:13px; text-transform:uppercase;}
+  .brand .mk{width:22px; height:22px; border-radius:7px; display:grid; place-items:center;
+    background:linear-gradient(140deg,var(--accent),var(--accent-strong)); box-shadow:0 4px 16px -3px var(--accent);}
+  .brand .mk svg{width:13px; height:13px; display:block;}
+  .seg{display:flex; gap:4px; padding:4px; border-radius:999px; background:rgba(12,18,34,0.5); border:1px solid var(--glass-border); backdrop-filter:blur(10px);}
+  .seg a{font-size:12.5px; font-weight:600; text-decoration:none; color:var(--muted); padding:6px 13px; border-radius:999px;}
+  .seg a.on{color:#fff; background:linear-gradient(140deg,var(--accent),var(--accent-strong)); box-shadow:0 6px 16px -8px var(--accent-strong);}
+  main{max-width:840px; margin:0 auto; padding:60px 22px 90px;}
+  .card{background:var(--glass); border:1px solid var(--glass-border); border-radius:28px;
+    padding:clamp(26px,4.5vw,52px); box-shadow:var(--shadow);
+    backdrop-filter:blur(30px) saturate(150%); -webkit-backdrop-filter:blur(30px) saturate(150%);
+    position:relative; overflow:hidden; animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
+  .card::before{content:""; position:absolute; inset:0 0 auto 0; height:1px;
+    background:linear-gradient(90deg,transparent,var(--glass-hi),transparent);}
+  @keyframes rise{from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:none;}}
+  .eyebrow{font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin:0 0 12px;}
+  h1{font-size:clamp(30px,5.4vw,46px); line-height:1.04; letter-spacing:-.028em; font-weight:800; margin:0 0 10px; text-wrap:balance;}
+  .updated{color:var(--faint); font-size:13.5px; margin:0 0 6px; font-variant-numeric:tabular-nums;}
+  .lede{color:var(--muted); font-size:17px; margin:18px 0 6px; max-width:62ch;}
+  h2{font-size:19px; font-weight:700; letter-spacing:-.01em; margin:38px 0 8px;}
+  h2 .n{color:var(--accent); font-variant-numeric:tabular-nums; margin-right:10px; font-weight:800;}
+  p{margin:10px 0; color:var(--ink); opacity:.93; max-width:66ch;}
+  strong{color:var(--ink); opacity:1; font-weight:700;}
+  ul{margin:10px 0; padding-left:0; list-style:none; max-width:66ch;}
+  li{position:relative; padding-left:22px; margin:8px 0; color:var(--ink); opacity:.93;}
+  li::before{content:""; position:absolute; left:4px; top:.72em; width:6px; height:6px; border-radius:50%;
+    background:var(--accent); box-shadow:0 0 0 3px rgba(77,155,255,0.22);}
+  a{color:var(--accent); text-underline-offset:2px;}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px;}
+  .callout{margin:22px 0; padding:20px 22px; border-radius:18px; background:var(--callout); border:1px solid var(--callout-border);}
+  .callout h2{margin-top:0;}
+  .callout .tag{display:inline-flex; align-items:center; gap:7px; font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;}
+  .callout .tag svg{width:14px; height:14px;}
+  footer{max-width:840px; margin:0 auto; padding:0 22px 70px; color:var(--faint); font-size:14px;}
+  @media (prefers-reduced-motion: reduce){ .card{animation:none;} }
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="scrim"></div>
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/><path d="M4 17l4-1 2-4 3 2 1 4"/><path d="M9 8l3-1 3 2 3-1"/></svg></span> PACE Running Club</div>
+    <nav class="seg"><a href="privacy.html">Privacy</a><a class="on" href="terms.html">Terms</a></nav>
+  </div>
+</header>
+<main>
+  <article class="card">
+    <p class="eyebrow">Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: 8 July 2026</p>
+    
+    <p class="lede">These Terms of Service (&ldquo;Terms&rdquo;) are a binding agreement between you and Andrei Bredikhin (&ldquo;we&rdquo;, &ldquo;us&rdquo;) governing your use of the PACE Running Club application (&ldquo;PACE&rdquo;, the &ldquo;App&rdquo;). By creating an account or using the App, you agree to these Terms and to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <h2><span class="n">1</span>Eligibility</h2>
+    <p>You must be at least 13 years old (or the minimum age required in your country) to use PACE.</p>
+    <h2><span class="n">2</span>Your account</h2>
+    <p>You are responsible for keeping your credentials secure and for activity under your account. Provide accurate information and keep it up to date.</p>
+    <h2><span class="n">3</span>Health and safety disclaimer</h2>
+    <p>PACE is a fitness-tracking and coaching tool, <strong>not</strong> a medical device or medical advice. Consult a qualified professional before starting any exercise program. Distance, pace, heart rate, and other metrics are estimates and may be inaccurate. You use the App and undertake any physical activity <strong>at your own risk</strong>.</p>
+    <h2><span class="n">4</span>User content</h2>
+    <p>You retain ownership of content you create (routes, photos, voice cheers, posts, comments). You grant us a non-exclusive, worldwide, royalty-free license to host, store, reproduce, and display that content solely to operate and provide the App. You are responsible for content you post and must have the rights to it.</p>
+    <div class="callout">
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg> Community safety</span>
+      <h2 style="margin-top:0"><span class="n">5</span>Objectionable content &amp; abuse — zero tolerance</h2>
+      <p style="margin-bottom:0">There is <strong>no tolerance for objectionable, abusive, harassing, hateful, threatening, or otherwise inappropriate content or behavior</strong> on PACE. You agree <strong>not</strong> to post such content or engage in such behavior. We provide tools to <strong>report</strong> objectionable content or abusive users and to <strong>block</strong> users from within the App. We review reports and act on violations — which may include removing content and suspending or terminating accounts — and we aim to act on reports of objectionable content within <strong>24 hours</strong>.</p>
+    </div>
+    <h2><span class="n">6</span>Prohibited conduct</h2>
+    <p>You agree not to: violate any law; infringe others&rsquo; rights; upload malware; scrape or reverse-engineer the App; interfere with its operation or security; impersonate others; or use the App to harass, threaten, or harm anyone.</p>
+    <h2><span class="n">7</span>Termination</h2>
+    <p>We may suspend or terminate your access for violation of these Terms or to protect users or the service. You may stop using PACE and delete your account at any time from <em>Settings → Delete account</em>.</p>
+    <h2><span class="n">8</span>Disclaimers and limitation of liability</h2>
+    <p>The App is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo; without warranties of any kind. To the maximum extent permitted by law, we are not liable for indirect, incidental, or consequential damages, or for any injury, loss, or damage arising from your use of the App or any physical activity.</p>
+    <h2><span class="n">9</span>Changes</h2>
+    <p>We may update these Terms. Continued use after changes take effect constitutes acceptance. Material changes will be reflected by the &ldquo;Last updated&rdquo; date and, where appropriate, notified in the App.</p>
+    <h2><span class="n">10</span>Governing law</h2>
+    <p>These Terms are governed by the laws applicable in your country of residence, without regard to conflict-of-laws principles.</p>
+    <h2><span class="n">11</span>Contact</h2>
+    <p>Andrei Bredikhin — <a href="mailto:avbredihin@gmail.com">avbredihin@gmail.com</a></p>
+  </article>
+</main>
+<footer>PACE Running Club is operated by Andrei Bredikhin. Questions? <a href="mailto:avbredihin@gmail.com">avbredihin@gmail.com</a></footer>
+<script>
+(function(){
+  var canvas = document.getElementById('bg');
+  var gl = canvas.getContext('webgl', {antialias:false, alpha:false, powerPreference:'high-performance'});
+  if(!gl){ document.body.style.background='#070a14'; return; }
+  var PALETTE = ["#0040cc","#006aff","#3aa0ff","#00d0ff"];
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vertSrc = 'attribute vec2 aPos; varying vec2 vUv; void main(){ vUv = aPos*0.5+0.5; gl_Position = vec4(aPos,0.0,1.0); }';
+  var fragSrc = [
+  'precision highp float;',
+  '#define MAX_COLORS 8',
+  'uniform vec2 uCanvas; uniform float uTime; uniform float uSpeed; uniform vec2 uRot;',
+  'uniform int uColorCount; uniform vec3 uColors[MAX_COLORS]; uniform int uTransparent;',
+  'uniform float uScale; uniform float uFrequency; uniform float uWarpStrength;',
+  'uniform vec2 uPointer; uniform float uMouseInfluence; uniform float uParallax;',
+  'uniform float uNoise; uniform int uIterations; uniform float uIntensity; uniform float uBandWidth;',
+  'varying vec2 vUv;',
+  'void main(){',
+  '  float t = uTime * uSpeed;',
+  '  vec2 p = vUv * 2.0 - 1.0;',
+  '  p += uPointer * uParallax * 0.1;',
+  '  vec2 rp = vec2(p.x*uRot.x - p.y*uRot.y, p.x*uRot.y + p.y*uRot.x);',
+  '  vec2 q = vec2(rp.x*(uCanvas.x/uCanvas.y), rp.y);',
+  '  q /= max(uScale,0.0001);',
+  '  q /= 0.5 + 0.2*dot(q,q);',
+  '  q += 0.2*cos(t) - 7.56;',
+  '  vec2 toward = (uPointer - rp);',
+  '  q += toward * uMouseInfluence * 0.2;',
+  '  for(int j=0;j<5;j++){ if(j>=uIterations-1) break; vec2 rr = sin(1.5*(q.yx*uFrequency)+2.0*cos(q*uFrequency)); q += (rr-q)*0.15; }',
+  '  vec3 col = vec3(0.0); float a = 1.0;',
+  '  if(uColorCount>0){',
+  '    vec2 s=q; vec3 sumCol=vec3(0.0); float cover=0.0;',
+  '    for(int i=0;i<MAX_COLORS;++i){ if(i>=uColorCount) break;',
+  '      s-=0.01; vec2 r = sin(1.5*(s.yx*uFrequency)+2.0*cos(s*uFrequency));',
+  '      float m0 = length(r + sin(5.0*r.y*uFrequency - 3.0*t + float(i))/4.0);',
+  '      float kBelow = clamp(uWarpStrength,0.0,1.0); float kMix = pow(kBelow,0.3);',
+  '      float gain = 1.0 + max(uWarpStrength-1.0,0.0); vec2 disp=(r-s)*kBelow; vec2 warped=s+disp*gain;',
+  '      float m1 = length(warped + sin(5.0*warped.y*uFrequency - 3.0*t + float(i))/4.0);',
+  '      float m = mix(m0,m1,kMix); float w = 1.0 - exp(-uBandWidth/exp(uBandWidth*m));',
+  '      sumCol += uColors[i]*w; cover = max(cover,w); }',
+  '    col = clamp(sumCol,0.0,1.0); a = uTransparent>0 ? cover : 1.0;',
+  '  }',
+  '  col *= uIntensity;',
+  '  if(uNoise>0.0001){ float n = fract(sin(dot(gl_FragCoord.xy+vec2(uTime),vec2(12.9898,78.233)))*43758.5453123); col += (n-0.5)*uNoise; col = clamp(col,0.0,1.0); }',
+  '  gl_FragColor = vec4(col, 1.0);',
+  '}'].join(String.fromCharCode(10));
+  function sh(type,src){ var s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); return s; }
+  var prog = gl.createProgram();
+  gl.attachShader(prog, sh(gl.VERTEX_SHADER,vertSrc));
+  gl.attachShader(prog, sh(gl.FRAGMENT_SHADER,fragSrc));
+  gl.linkProgram(prog); gl.useProgram(prog);
+  var buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  var aPos = gl.getAttribLocation(prog,'aPos'); gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos,2,gl.FLOAT,false,0,0);
+  function U(n){ return gl.getUniformLocation(prog,n); }
+  var u = { canvas:U('uCanvas'), time:U('uTime'), speed:U('uSpeed'), rot:U('uRot'),
+    colorCount:U('uColorCount'), colors:U('uColors[0]'), transparent:U('uTransparent'),
+    scale:U('uScale'), frequency:U('uFrequency'), warp:U('uWarpStrength'), pointer:U('uPointer'),
+    mouse:U('uMouseInfluence'), parallax:U('uParallax'), noise:U('uNoise'), iter:U('uIterations'),
+    intensity:U('uIntensity'), band:U('uBandWidth') };
+  function hex(h){ h=h.replace('#',''); if(h.length===3) h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    return [parseInt(h.slice(0,2),16)/255, parseInt(h.slice(2,4),16)/255, parseInt(h.slice(4,6),16)/255]; }
+  var flat = new Float32Array(24);
+  for(var i=0;i<PALETTE.length && i<8;i++){ var c=hex(PALETTE[i]); flat[i*3]=c[0]; flat[i*3+1]=c[1]; flat[i*3+2]=c[2]; }
+  gl.uniform3fv(u.colors, flat);
+  gl.uniform1i(u.colorCount, PALETTE.length);
+  gl.uniform1i(u.transparent, 1);
+  gl.uniform1f(u.speed, 0.16);
+  gl.uniform1f(u.scale, 1.15);
+  gl.uniform1f(u.frequency, 1.0);
+  gl.uniform1f(u.warp, 1.0);
+  gl.uniform1f(u.mouse, 0.5);
+  gl.uniform1f(u.parallax, 0.4);
+  gl.uniform1f(u.noise, 0.10);
+  gl.uniform1i(u.iter, 2);
+  gl.uniform1f(u.intensity, 1.15);
+  gl.uniform1f(u.band, 6.5);
+  var ptrTarget=[0,0], ptrCur=[0,0];
+  window.addEventListener('pointermove', function(e){
+    ptrTarget[0] = (e.clientX/window.innerWidth)*2-1;
+    ptrTarget[1] = -((e.clientY/window.innerHeight)*2-1);
+  });
+  function resize(){ var dpr=Math.min(window.devicePixelRatio||1,2);
+    var w=Math.floor(window.innerWidth*dpr), h=Math.floor(window.innerHeight*dpr);
+    if(canvas.width!==w||canvas.height!==h){ canvas.width=w; canvas.height=h; }
+    gl.viewport(0,0,canvas.width,canvas.height); gl.uniform2f(u.canvas, canvas.width, canvas.height); }
+  window.addEventListener('resize', resize); resize();
+  var rot=90, start=performance.now();
+  function frame(now){
+    var t=(now-start)/1000;
+    gl.uniform1f(u.time, t);
+    var rad=rot*Math.PI/180; gl.uniform2f(u.rot, Math.cos(rad), Math.sin(rad));
+    ptrCur[0]+=(ptrTarget[0]-ptrCur[0])*0.06; ptrCur[1]+=(ptrTarget[1]-ptrCur[1])*0.06;
+    gl.uniform2f(u.pointer, ptrCur[0], ptrCur[1]);
+    gl.drawArrays(gl.TRIANGLES,0,3);
+    if(!reduce) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
